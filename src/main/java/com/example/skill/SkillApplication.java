@@ -1,15 +1,13 @@
-package com.example.demo;
+package com.example.skill;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.Date;
 
 @SpringBootApplication
-public class DemoApplication {
+public class SkillApplication {
 
     public static void main(String[] args) {
-        System.out.println(new Date());
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(SkillApplication.class, args);
     }
 }
