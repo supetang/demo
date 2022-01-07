@@ -8,10 +8,14 @@
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
             <pattern>${log.pattern}</pattern>
+            <!--控制台日志打印级别-->
+            <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+                <level>INFO</level>
+            </filter>
         </encoder>
     </appender>
 
-    <appender name="run" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <appender name="RUN" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_HOME}/run.log</file>
         <!--定义滚动策略，TimeBasedRollingPolicy基于时间的滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -29,9 +33,14 @@
         </triggeringPolicy>
     </appender>
 
+    <!--配置指定文件下面的生成日志 例如引进的三方的jar包 单独配置的日志的文件路径-->
+<!--    <logger name="com.example.skill" level="DEBUG" additivity="true">-->
+<!--        <appender-ref ref="RUN"/>-->
+<!--    </logger>-->
+
     <!-- 日志输出级别 -->
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
-        <appender-ref ref="run"/>
+        <appender-ref ref="RUN"/>
     </root>
 </configuration>
