@@ -28,9 +28,9 @@ public class FutureWork {
             User user = new User();
             // 创建对象链式调用对象的属性
             user.phoneNumBerSet("17688780000").sexSet(1).userNameSet("tangchao");
-            List<User> list = Lists.newArrayList();
-            list.add(user);
-            return user;
+            List<User> userList = Lists.newArrayList();
+            userList.add(user);
+            return userList;
         });
 
         // 相关的其他的业务处理逻辑

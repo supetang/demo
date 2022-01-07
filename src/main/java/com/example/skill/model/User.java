@@ -1,26 +1,35 @@
 package com.example.skill.model;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.NoArgsConstructor;
+
+import javax.validation.Valid;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
-@EqualsAndHashCode
-@ToString
+@NoArgsConstructor
 public class User {
 
+    @Max(32)
+    @Min(0)
+    private String id;
+    @NotBlank(message = "用户名不能为空")
     private String userName;
 
+    @NotNull(message = "phoneNumBer不能为空")
+    @Valid
     private String phoneNumBer;
-
+    @Max(3)
+    @Min(0)
+    @NotNull
     private Integer sex;
 
-    public User() {
-
-    }
-    
     /**
      *  java实现调用链路方式
      * */
