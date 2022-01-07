@@ -20,19 +20,22 @@ public class User {
     public User() {
 
     }
-
-    public String userNameSet(String userName){
+    
+    /**
+     *  java实现调用链路方式
+     * */
+    public User userNameSet(String userName){
         this.userName = userName;
-        return userName;
+        return this;
     }
 
-    public Integer sexSet(Integer sex){
+    public User sexSet(Integer sex){
         this.sex = sex;
-        return sex;
+        return this;
     }
 
-    public String phoneNumBerSet(String phoneNumBer){
+    public User phoneNumBerSet(String phoneNumBer){
         this.phoneNumBer = phoneNumBer;
-        return phoneNumBer;
+        return this;
     }
 }
