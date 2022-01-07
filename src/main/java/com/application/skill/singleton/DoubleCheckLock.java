@@ -1,4 +1,4 @@
-package com.example.skill.singleton;
+package com.application.skill.singleton;
 
 /**
  * 设计模式值单例模式->懒汉模式

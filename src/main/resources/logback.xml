@@ -10,9 +10,9 @@
             <pattern>${log.pattern}</pattern>
         </encoder>
         <!-- 过滤掉 TRACE 和 DEBUG 级别的日志-->
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>INFO</level>
-        </filter>
+<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+<!--            <level>INFO</level>-->
+<!--        </filter>-->
     </appender>
 
     <appender name="RUN" class="ch.qos.logback.core.rolling.RollingFileAppender">

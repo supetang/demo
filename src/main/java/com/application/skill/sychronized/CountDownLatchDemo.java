@@ -1,8 +1,11 @@
-package com.example.skill.sychronized;
+package com.application.skill.sychronized;
+
+
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
-
-public class CountDownLatchDemo2 {
+@Slf4j
+public class CountDownLatchDemo {
 
     private static int total = 0;
     private static Object object = new Object();
@@ -14,11 +17,7 @@ public class CountDownLatchDemo2 {
                 try {
                     countDownLatch.await();
                     for (int j = 0; j < 1000; j++) {
-                        // 临界资源，线程不安全 同步安全处理的方式有两种
-                        // TODO 代码同步快的实现 2022/01/07
-                        synchronized (object){
-                            total++;
-                        }
+                        total++;
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();

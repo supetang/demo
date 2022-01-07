@@ -1,15 +1,11 @@
-package com.example.skill.sychronized;
+package com.application.skill.sychronized;
 
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.locks.ReentrantLock;
 
-public class CountDownLatchDemo3 {
+public class CountDownLatchDemo2 {
 
     private static int total = 0;
     private static Object object = new Object();
-    // synchronized 内置锁,隐射锁（jvm内部实现） ReentrantLock是显示锁
-    private static ReentrantLock reentrantLock = new ReentrantLock();
-
 
     public static void main(String[] args) throws InterruptedException {
         CountDownLatch countDownLatch = new CountDownLatch(1);
@@ -20,14 +16,12 @@ public class CountDownLatchDemo3 {
                     for (int j = 0; j < 1000; j++) {
                         // 临界资源，线程不安全 同步安全处理的方式有两种
                         // TODO 代码同步快的实现 2022/01/07
-                        reentrantLock.lock();
-                        total++;
+                        synchronized (object){
+                            total++;
+                        }
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
-                finally {
-                    reentrantLock.unlock();
                 }
             }).start();
         }

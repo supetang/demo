@@ -1,6 +1,9 @@
-package com.example.skill.model;
+package com.application.skill.model;
 
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,20 +19,27 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
+@TableName("t_user")
 public class User {
 
     @Max(32)
     @Min(0)
+    @TableId("id")
     private String id;
+
+    @TableField("userName")
     @NotBlank(message = "用户名不能为空")
     private String userName;
 
+    @TableField("phoneNumBer")
     @NotNull(message = "phoneNumBer不能为空")
     @Valid
     private String phoneNumBer;
+
     @Max(3)
     @Min(0)
     @NotNull
+    @TableField("sex")
     private Integer sex;
 
     /**
