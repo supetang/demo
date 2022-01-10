@@ -15,8 +15,9 @@
     <description>skill</description>
     <properties>
         <java.version>1.8</java.version>
-        <validator.version>6.0.7.Final</validator.version>
-        <powermock.version>1.7.1</powermock.version>
+        <validator.version>7.0.1.Final</validator.version>
+        <powermock.version>2.0.9</powermock.version>
+        <mybatis-plus.version>3.5.0</mybatis-plus.version>
     </properties>
 
     <dependencies>
@@ -49,20 +50,18 @@
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-core</artifactId>
-            <version>1.8.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>30.1.1-jre</version>
+            <version>31.0.1-jre</version>
         </dependency>
 
         <!--引入校验框架-->
@@ -102,13 +101,13 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.0</version>
+            <version>${mybatis-plus.version}</version>
         </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.18</version>
+            <version>8.0.25</version>
         </dependency>
 
         <dependency>

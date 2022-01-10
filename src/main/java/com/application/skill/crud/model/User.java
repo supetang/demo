@@ -1,4 +1,4 @@
-package com.application.skill.model;
+package com.application.skill.crud.model;
 
 
 import com.baomidou.mybatisplus.annotation.TableField;

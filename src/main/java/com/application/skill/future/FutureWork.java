@@ -1,6 +1,6 @@
 package com.application.skill.future;
 
-import com.application.skill.model.User;
+import com.application.skill.crud.model.User;
 import com.google.common.collect.Lists;
 import org.springframework.web.client.RestTemplate;
 

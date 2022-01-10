@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-@MapperScan("com.application.skill")
+@MapperScan("com.application.skill.crud.mapper")
 public class SkillApplication {
 
     public static void main(String[] args) {

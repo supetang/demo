@@ -1,8 +1,8 @@
-package com.application.skill.service.impl;
+package com.application.skill.crud.service.impl;
 
-import com.application.skill.mapper.UserMapper;
-import com.application.skill.model.User;
-import com.application.skill.service.UserService;
+import com.application.skill.crud.mapper.UserMapper;
+import com.application.skill.crud.model.User;
+import com.application.skill.crud.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
