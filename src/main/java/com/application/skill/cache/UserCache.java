@@ -11,12 +11,15 @@ import org.springframework.stereotype.Component;
 import java.util.concurrent.TimeUnit;
 @Component
 @Slf4j
+/*
+* tangchao
+* */
 public class UserCache {
 
     @Autowired
     private UserMapper userMapper;
 
-    public LoadingCache LoadCacheUser(String id){
+    public LoadingCache loadCacheUser(String id){
         return  CacheBuilder.newBuilder()
                 .maximumSize(100)
                 .expireAfterWrite(30, TimeUnit.MINUTES)

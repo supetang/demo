@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * 统一API返回json工具类
+ * @author tangchao
  */
 public class Result<T> implements Serializable {
 

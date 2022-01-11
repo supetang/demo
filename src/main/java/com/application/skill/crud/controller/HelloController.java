@@ -36,8 +36,8 @@ public class HelloController {
 
     @RequestMapping("/index2")
     public Result<User> result2() throws Exception{
-        System.out.println(userCache.LoadCacheUser("1").toString());
-        System.out.println(userCache.LoadCacheUser("1").get("1"));
+        System.out.println(userCache.loadCacheUser("1").toString());
+        System.out.println(userCache.loadCacheUser("1").get("1"));
         Result<User> result = new Result<>();
         result.setData(null);
         result.setCode(1);

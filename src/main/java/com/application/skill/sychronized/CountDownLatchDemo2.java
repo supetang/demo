@@ -2,10 +2,13 @@ package com.application.skill.sychronized;
 
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * @author tangchao
+ */
 public class CountDownLatchDemo2 {
 
     private static int total = 0;
-    private static Object object = new Object();
+    private static final Object object = new Object();
 
     public static void main(String[] args) throws InterruptedException {
         CountDownLatch countDownLatch = new CountDownLatch(1);

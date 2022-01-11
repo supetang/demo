@@ -4,11 +4,14 @@ package com.application.skill.sychronized;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
+/**
+ * @author tangchao
+ */
 @Slf4j
 public class CountDownLatchDemo {
 
     private static int total = 0;
-    private static Object object = new Object();
+    private static final Object object = new Object();
 
     public static void main(String[] args) throws InterruptedException {
         CountDownLatch countDownLatch = new CountDownLatch(1);

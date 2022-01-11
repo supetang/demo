@@ -49,9 +49,9 @@ public enum ResultCode {
     PERMISSION_NO_PHONE_ACCESS(70002, "此认证标签已有员工认证，不可以进行删除");
 
 
-    private Integer code;
+    private final Integer code;
 
-    private String message;
+    private final String message;
 
     ResultCode(Integer code, String message) {
         this.code = code;
