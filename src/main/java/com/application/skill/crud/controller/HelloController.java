@@ -8,6 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * http://localhost:9111/index
+ * <p>
+ * https://blog.csdn.net/chuopi0561/article/details/100682122
+ */
 @Controller
 public class HelloController {
 
