@@ -21,7 +21,7 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <FileNamePattern>${LOG_HOME}/run-%d{yyyy-MM-dd}.log.gz</FileNamePattern>
             <!--日志文件保留天数-->
-            <MaxHistory>1</MaxHistory>
+            <MaxHistory>30</MaxHistory>
         </rollingPolicy>
         <!--定义日志格式-->
         <encoder>

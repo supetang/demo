@@ -8,16 +8,19 @@
         <version>2.6.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.application</groupId>
     <artifactId>skill</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>skill</name>
     <description>skill</description>
+
     <properties>
         <java.version>1.8</java.version>
         <validator.version>7.0.1.Final</validator.version>
         <powermock.version>2.0.9</powermock.version>
         <mybatis-plus.version>3.5.0</mybatis-plus.version>
+        <guava.version>31.0.1-jre</guava.version>
     </properties>
 
     <dependencies>
@@ -88,6 +91,12 @@
             <artifactId>powermock-module-junit4</artifactId>
             <version>${powermock.version}</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>objenesis</artifactId>
+                    <groupId>org.objenesis</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -119,8 +128,20 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>31.0.1-jre</version>
+            <version>${guava.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-vpc</artifactId>
+            <version>[3.0.40-rc, 3.1.0)</version>
+        </dependency>
+        <dependency>
+            <groupId>com.huaweicloud</groupId>
+            <artifactId>esdk-obs-java-bundle</artifactId>
+            <version>[3.21.8,)</version>
+        </dependency>
+
     </dependencies>
 
     <build>
