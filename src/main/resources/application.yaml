@@ -17,3 +17,14 @@ mybatis-plus:
   type-aliases-package: com.application.skill.crud.model
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  global-config:
+#    db-config:
+#      logic-not-delete-value: 0
+#      logic-delete-field: 1
+
+logging:
+  level:
+    root: warn
+    com.application.skill.crud.mapper: trace
+  pattern:
+    console: '%p%m%n'

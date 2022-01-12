@@ -45,6 +45,9 @@ public class User {
     @TableField("sex")
     private Integer sex;
 
+    @TableField("isDelete")
+    private Integer isDelete;
+
     /**
      *  java实现调用链路方式
      * */
